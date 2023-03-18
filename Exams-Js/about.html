@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <!-- <div class="spinner d-flex justify-content-center align-items-center vh-100">
+        <span class="loader "></span>
+      </div> -->
+      <!-- <div class="d-none spinner text-white d-flex justify-content-center align-items-center vh-100">
+        <i class="fa fa-spinner fa-spin fa-5x "></i>
+    </div> -->
+    <!-- <section id="search" >
+      <div class="container text-capitalize" id="searchData">
+       
+      </div>
+    </section> -->
+    <section id="contacts" >
+      <div
+        class="contact d-flex justify-content-center align-items-center vh-100"
+      >
+        <div class="container w-75 text-center" id="contactsContainer">
+          <div class="row text-capitalize" id="rowData">
+            <div class="col-md-6">
+              <input
+                type="text"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your name" onkeyup="validateInput()"
+                id="nameInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Special characters and numbers not allowed</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your Email" onkeyup="validateInput()"
+                id="emailInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Email not valid *exemple@yyy.zzz</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your phone" onkeyup="validateInput()"
+                id="phoneInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Enter valid Phone Number</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your age" onkeyup="validateInput()"
+                id="ageInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Enter valid age</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your password" onkeyup="validateInput()"
+                id="passInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+          </div>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="password"
+                name=""
+                class="form-control mb-4"
+                placeholder="Enter Your repassword" 
+                id="repassInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none">
+            <p>Enter valid repassword</p>
+          </div>
+            </div>
+          </div>
+          <button disabled="disabled" class="btn btn-outline-danger mt-3">
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+     
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
