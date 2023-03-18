@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="home">
+      <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+          <!-- <div class="col-md-3">
+            <div class="item rounded rounded-2">
+              <img
+                src="images/1bsv1q1560459826.jpg"
+                class="w-100"
+                alt=""
+                srcset=""
+              />
+              <div class="layer d-flex align-items-center">
+                <h2 class="text-black p-2">tomato</h2>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- SideNav---------------------------->
+    <section id="sideNav" class="sideNav  d-flex">
+      <div class="sideNavContent p-4 d-flex flex-column justify-content-between">
+        <div class="links text-capitalize">
+          <ul>
+            <li class="py-2 position-relative search" onclick="displaySearch();closeNav()">Search</li>
+            <li class="py-2 position-relative cate" onclick="getCategories(); closeNav()">Categories</li>
+            <li class="py-2 position-relative area" onclick="getArea(); closeNav()">area</li>
+            <li class="py-2 position-relative ing" onclick="getIngredients(); closeNav()">ingredients</li>
+            <li class="py-2 position-relative contact" onclick="displayContacts();closeNav()" >contact us</li>
+          </ul>
+        </div>
+        <div class="sideBar-footer">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-solid fa-globe"></i>
+          <div class="text-footer text-capitalize">
+            copyright a &copy; 2019 all rights reserved.
+          </div>
+        </div>
+      </div>
+      <div class="outsideNav bg-white text-black py-3 px-2 d-flex flex-column justify-content-between text-center">
+        <img src="images/logo.png" class="imgNav" alt="" srcset="" />
+        <i class="fa-2x fa-solid iconCursor fa-align-justify open-btn" ></i>
+        <i class="fa-2x fa-solid fa-x  iconCursor close-btn"></i>
+        <div class="outsideIcons">
+          <i class="fa-solid d-block fa-globe"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </section>
+    <!-- search------------------------------------- -->
+    <section id="search" class="d-none">
+      <div class="container text-capitalize" id="searchData">
+        <div class="row py-4 justify-content-center " id="rowData">
+          <div class="col-md-5">
+            <input
+              type="text"
+              class="form-control text-white"
+              placeholder="Search by name "  onkeyup="searchByName(this.value)"
+            />
+          </div>
+          <div class="col-md-5">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by first letter " onkeyup="searchByFirstLetter(this.value)" maxlength=1
+            />
+          </div>
+          <div class="row" id="dataofSearch"></div>
+        </div>
+      </div>
+    </section>
+    <!-- categories---------------------------- -->
+    <section id="categories" class="d-none">
+      <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+          <!-- <div class="col-md-3 ">
+            <div class="item rounded rounded-2">
+              <img
+                src="images/4er7mj1598733193.jpg"
+                class="w-100"
+                alt=""
+                srcset=""
+              />
+              <div class="layer text-center text-black">
+                <h2>tomato</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Area------------------- -->
+    <section id="area" class="d-none">
+      <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+          <div class="col-md-3">
+            <div class="item rounded rounded-2 text-center">
+              <i class="fa-solid fa-house-laptop fa-4x"></i>
+              <h3>American</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ingredients---------------- -->
+    <section id="ingredients" class="d-none">
+      <div class="container">
+        <div class="row py-5 g-4" id="rowData">
+          <div class="col-md-3">
+            <div class="item rounded rounded-2 text-center">
+              <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+              <h3>American</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contacts------------------------------------ -->
+    <section id="contacts" >
+      <div class="contact d-flex justify-content-center align-items-center vh-100 konafa" id="contactsData">
+        <div class="container w-75 text-center" id="contactsContainer">
+          <div class="row text-capitalize" id="rowData">
+            <div class="col-md-6">
+              <input
+                type="text"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your name" onkeyup="validateInput()"
+                id="nameInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none nameAlert">
+            <p>Special characters and numbers not allowed</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your Email" onkeyup="validateInput()"
+                id="emailInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none emailAlert">
+            <p>Email not valid *exemple@yyy.zzz</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your phone" onkeyup="validateInput()"
+                id="phoneInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none phoneAlert">
+            <p>Enter valid Phone Number</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your age" onkeyup="validateInput()"
+                id="ageInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none ageAlert">
+            <p>Enter valid age</p>
+          </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your password" onkeyup="validateInput()"
+                id="passInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none passAlert">
+            <p>Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+          </div>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="password"
+                name=""
+                class="form-control mb-4 text-white"
+                placeholder="Enter Your repassword" 
+                id="repassInp"
+              />
+              <div class="alert alert-danger w-100 mt-2 d-none repassAlert">
+            <p>Enter valid repassword</p>
+          </div>
+            </div>
+          </div>
+          <button id="submitBtn" disabled="disabled" class="btn btn-outline-danger mt-3">
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- details --------------------------- -->
+    <section id="details" class="d-none">
+      <div class="container">
+        <div class="row py-5" id="rowData">
+          <div class="col-md-4 text-white text-capitalize">
+            <img
+              src="images/1bsv1q1560459826.jpg"
+              class="w-100 rounded rounded-2"
+              alt=""
+              srcset=""
+            />
+            <h2>Sushi</h2>
+          </div>
+          <div class="col-md-8 text-white text-capitalize">
+            <h2>instructions</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+              deleniti maiores obcaecati corporis aperiam officia iure soluta
+              labore illum, beatae et ipsum dignissimos aspernatur quidem, ut
+              maxime ab ducimus illo eos omnis quam dolorem nihil. Laborum in
+              aperiam inventore facilis id, minus recusandae iusto consequatur
+              accusantium aut tempora temporibus nesciunt?
+            </p>
+            <h3>Area: Japanese</h3>
+            <h3>Category: seafood</h3>
+            <h3>Recipes: </h3>
+            <ul class="recipe d-flex flex-wrap ">
+              <li class="alert alert-info p-1 mt-2 me-3">300ml Sushi Rice</li>
+              <li class="alert alert-info p-1 mt-2 me-3 ">300ml Sushi Rice</li>
+              <li class="alert alert-info p-1 mt-2 me-3">300ml Sushi Rice</li>
+              <li class="alert alert-info p-1 mt-2 me-3">300ml Sushi Rice</li>
+              <li class="alert alert-info p-1 mt-2 me-3">300ml Sushi Rice</li>
+            </ul>
+            <h3 class="mb-4">tags: </h3>
+            <ul>
+              <li class="alert alert-danger p-1 mt-2 me-3">Stew</li>
+            </ul>
+           <a target="_blank" href=""> <button class="btn btn-success">Source</button></a>
+           <a target="_blank" href=""> <button class="btn btn-danger">Youtube</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- loader---------------------------- -->
+    <div class="d-none spinner position-fixed top-0 start-0 end-0 bottom-0 bg-black text-white d-flex justify-content-center align-items-center vh-100">
+        <i class="fa fa-spinner fa-spin fa-5x "></i>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
